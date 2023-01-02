@@ -84,7 +84,7 @@ pre {
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: local("Bebas Neue"), url("/audura-static/fonts/BebasNeue-Bold.ttf") format("truetype") tech(color-COLRv1), url("/fonts/BebasNeue-Bold.otf") format("opentype"); }
+  src: local("Bebas Neue"), url("/audura-static/fonts/BebasNeue-Bold.ttf") format("truetype") tech(color-COLRv1), url("/audura-static/fonts/BebasNeue-Bold.otf") format("opentype"); }
 
 @font-face {
   font-family: "Jura";
@@ -504,7 +504,7 @@ button,
     color: #000; }
 
 main[data-page='homepage'] header {
-  background-image: url("/audura-static/statics/homepage/cover_homepage.png"); }
+  background-image: url("/audura-static/imgs/covers/cover_homepage.png"); }
 
 @media (max-width: 480px) {
   main[data-page='homepage'] .homepage__about-item {
@@ -551,9 +551,9 @@ main[data-page='homepage'] .homepage__references > div {
       main[data-page='homepage'] .homepage__references > div .references--image {
         flex: 1; } }
   main[data-page='homepage'] .homepage__references > div:nth-child(2) .references--image {
-    background-image: url("/audura-static/statics/homepage/certified.png"); }
+    background-image: url("/audura-static/imgs/homepage/certified.png"); }
   main[data-page='homepage'] .homepage__references > div:nth-child(3) .references--image {
-    background-image: url("/audura-static/statics/homepage/countries.png");
+    background-image: url("/audura-static/imgs/homepage/countries.png");
     width: 60px; }
   main[data-page='homepage'] .homepage__references > div:nth-child(4) .references--image {
-    background-image: url("/audura-static/statics/homepage/affordable.png"); }
+    background-image: url("/audura-static/imgs/homepage/affordable.png"); }
