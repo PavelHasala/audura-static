@@ -5,7 +5,7 @@
     <title>Audura - Homepage</title>
   </head>
   <body>
-    <main data-page=homepage>
+    <div class="page"data-page=homepage>
       <input type="checkbox" class="Menu--mobile" />
 <nav class="Menu">
 	<a href="/" class="Menu--logo"></a>
@@ -34,7 +34,7 @@
 		</nav>
 	</div>
 </nav>
-      <header class="section">
+      <header>
         <h1>
           
   <span>We care about reliability</span>
@@ -43,9 +43,13 @@
         </h1>
       </header>
 
-      <section class="Content section">
+      <main class="content">
         
-  <div class="grid delimeter">
+  
+
+
+
+  <section class="grid">
     <h2 class="grid--item header">Made by pros<br>used by you</h2>
     <div class="grid--item">
       <p>We understand what your car means to you and how it serves your professional and personal life.</p>
@@ -56,9 +60,9 @@
         <a href="#about" class="Button">about us</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="grid delimeter border-box homepage__references">
+  <section class="grid border-box homepage__references">
     <div>
       <p>German founded Audura is a brand of the Emotive group, one of the biggest suppliers of car parts in Europe.</p>
     </div>
@@ -87,22 +91,91 @@
         <span>QUALITY PARTS</span>
       </p>
     </div>
-  </div>
+  </section>
 
-  <div class="grid delimeter">
+  <section class="grid">
     <div class="grid--item"></div>
     <div class="grid--item">
       <p>Under several specialized brands, we bring more than 70 million parts to the automotive aftermarket year after year.</p>
       <p>Our decades of industry experience make us the reliable choice.</p>
     </div>
-  </div>
+  </section>
 
-  <h2 class="delimeter" a-center>Our products</h2>
+  <section>
+    <h2 a-center>Our products</h2>
+
+    <div class="grid products">
+      
+		<div class="Product" product-type="brakes">
+			<div class="Product--wrapper">
+				<h2>Brakes</h2>
+				<p class="Product--perex">What is more important than your safety? As such, reliable, and perfectly working brakes must be top priority. Get them for a good price</p>
+				
+					<a href="#brakes" class="button Product--link">all parts</a>
+				
+			</div>
+		</div>
+
+      
+		<div class="Product" product-type="filters">
+			<div class="Product--wrapper">
+				<h2>Filters</h2>
+				<p class="Product--perex">What’s protecting you and your car? Cabin, oil, fuel, and air filters. When these four kinds of filters all work properly to catch dust, contaminants, impurities and dirt, your car and you will stay healthy.</p>
+				
+					<a href="#brakes" class="button Product--link">all parts</a>
+				
+			</div>
+		</div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 a-center>Top articles</h2>
+    <div class="articles">
+      
+	<article class="Article--preview">
+		<div>
+			<h4 class="header--solid">Top quality requires repeatable production</h4>
+			<h5 class="posted">AUG. 11 2023</h5>
+		</div>
+		<p class="perex">We are able to achieve it on automated, technologically advanced and robotic production lines. Top quality requires repeatable production. We are able to achieve it on automated, technologically advanced and robotic production lines</p>
+		<img src="/statics/imgs/articles/default.png" width="180" alt="">
+	</article>
+
+
+      
+	<article class="Article--preview">
+		<div>
+			<h4 class="header--solid">Top quality requires repeatable production</h4>
+			<h5 class="posted">AUG. 11 2023</h5>
+		</div>
+		<p class="perex">We are able to achieve it on automated, technologically advanced and robotic production lines. Top quality requires repeatable production. We are able to achieve it on automated, technologically advanced and robotic production lines</p>
+		<img src="/statics/imgs/articles/default.png" width="180" alt="">
+	</article>
+
+
+      
+	<article class="Article--preview">
+		<div>
+			<h4 class="header--solid">Top quality requires repeatable production</h4>
+			<h5 class="posted">AUG. 11 2023</h5>
+		</div>
+		<p class="perex">We are able to achieve it on automated, technologically advanced and robotic production lines. Top quality requires repeatable production. We are able to achieve it on automated, technologically advanced and robotic production lines</p>
+		<img src="/statics/imgs/articles/default.png" width="180" alt="">
+	</article>
+
+
     
+      <div class="centered-box expand-buttons">
+        <a href="/" class="link">expand list (32)</a>
+      </div>
+    </div>
+  </section>
 
-      </section>
+      </main>
 
-      <footer>
+      <footer class="delimeter">
 	<div class="grid delimeter">
 		<div class="grid--item">
 			<form>
@@ -146,7 +219,7 @@
 		&copy; Copyright  2022 by Audura  -  All Rights Reserved.
 	</p>
 </footer>
-    </main>
+    </div>
 
     <script>
       document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +':35729/livereload.js?snipver=1"></' + 'script>')
