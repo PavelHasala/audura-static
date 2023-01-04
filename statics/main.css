@@ -84,17 +84,17 @@ pre {
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: local("Bebas Neue"), url("./statics/fonts/BebasNeue-Bold.ttf") format("truetype") tech(color-COLRv1), url("./statics/fonts/BebasNeue-Bold.otf") format("opentype"); }
+  src: local("Bebas Neue"), url("./fonts/BebasNeue-Bold.ttf") format("truetype") tech(color-COLRv1), url("./fonts/BebasNeue-Bold.otf") format("opentype"); }
 
 @font-face {
   font-family: "Jura";
   font-weight: 600;
-  src: local("Jura"), url("./statics/fonts/Jura-SemiBold.ttf") format("truetype") tech(color-COLRv1); }
+  src: local("Jura"), url("./fonts/Jura-SemiBold.ttf") format("truetype") tech(color-COLRv1); }
 
 @font-face {
   font-family: "Jura";
   font-weight: 700;
-  src: local("Jura"), url("./statics/fonts/Jura-Bold.ttf") format("truetype") tech(color-COLRv1); }
+  src: local("Jura"), url("./fonts/Jura-Bold.ttf") format("truetype") tech(color-COLRv1); }
 
 h1, h2, h3 {
   margin-bottom: 20px; }
