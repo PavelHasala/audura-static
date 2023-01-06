@@ -758,9 +758,12 @@ a.link {
   a.link:hover {
     text-decoration: none; }
 
-@media (min-width: 580px) {
-  .page[data-page='general'] header h1 {
-    width: 50%; } }
+.page[data-page='general'] header {
+  border: none;
+  padding: 50px; }
+  @media (min-width: 580px) {
+    .page[data-page='general'] header h1 {
+      width: 50%; } }
 
 @media (min-width: 580px) {
   .page[data-page='general'] footer {
