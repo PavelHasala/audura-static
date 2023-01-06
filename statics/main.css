@@ -620,7 +620,7 @@ section + section,
         padding: 30px 50px; } }
   .border-box[border-items] .grid--item {
     flex: 1 1 50%;
-    padding: 30px 50px; }
+    padding: 1rem; }
     .border-box[border-items] .grid--item[grid-flex='1'] {
       flex: 1; }
     .border-box[border-items] .grid--item[grid-flex='2'] {
@@ -632,8 +632,10 @@ section + section,
     .border-box[border-items] .grid--item[grid-flex='5'] {
       flex: 5; }
     @media (min-width: 580px) {
-      .border-box[border-items] .grid--item:not(:first-child) {
-        border-left: 1px solid #5f5f5f; } }
+      .border-box[border-items] .grid--item {
+        padding: 30px 50px; }
+        .border-box[border-items] .grid--item:not(:first-child) {
+          border-left: 1px solid #5f5f5f; } }
     @media (max-width: 579px) {
       .border-box[border-items] .grid--item {
         border-left: none;
@@ -834,9 +836,17 @@ input {
   .form--item textarea.error {
     border-color: #bb4a4a; }
 
-@media (min-width: 580px) {
-  .form--item textarea {
-    height: 200px; } }
+.form--item textarea {
+  height: 150px; }
+  @media (min-width: 580px) {
+    .form--item textarea {
+      height: 250px; } }
+
+@media (max-width: 579px) {
+  .form--item button,
+  .form--item .Button {
+    text-align: center;
+    width: 100%; } }
 
 button,
 .Button {
@@ -859,7 +869,7 @@ a:hover {
   color: #3ddee2; }
 
 @media (max-width: 579px) {
-  a:not(.button) {
+  a:not(.Button) {
     line-height: 2.5rem; } }
 
 a.link {
@@ -1008,10 +1018,18 @@ a.link {
     display: grid;
     grid-template-columns: 33% 1fr 1fr; } }
 
+@media (max-width: 579px) {
+  [data-page='contact'] .contact__box .grid--item > span {
+    display: block;
+    text-align: center; } }
+
 [data-page='contact'] .contact__box .grid--item:first-child {
   grid-column: 1;
   font-size: 3rem;
   color: #5f5f5f; }
+  @media (max-width: 579px) {
+    [data-page='contact'] .contact__box .grid--item:first-child {
+      border-top: none; } }
 
 [data-page='contact'] .contact__box .grid--item:nth-child(3) {
   color: #3ddee2;
@@ -1029,3 +1047,10 @@ a.link {
 @media (min-width: 580px) {
   [data-page='contact'] .contact__form {
     grid-template-columns: 33% 1fr; } }
+
+@media (max-width: 579px) {
+  [data-page='contact'] .contact__form {
+    border: none; }
+    [data-page='contact'] .contact__form > .grid {
+      border: none;
+      padding: 1rem 0; } }
