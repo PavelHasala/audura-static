@@ -372,9 +372,10 @@ footer {
         line-height: 3rem;
         text-align: center; } }
 
-[single-column] {
-  margin: auto;
-  width: 50%; }
+@media (min-width: 998px) {
+  [single-column] {
+    margin: auto;
+    width: 50%; } }
 
 section + section,
 .delimeter + section, section +
