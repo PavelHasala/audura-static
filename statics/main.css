@@ -152,8 +152,7 @@ h2, .ContentBox--box-title,
     color: #000; }
 
 h3,
-.as-h3,
-.article-header h1 {
+.as-h3 {
   color: #fefefe;
   font-size: 3rem;
   font-weight: 600;
@@ -161,18 +160,15 @@ h3,
   line-height: 3rem; }
   @media (max-width: 579px) {
     h3,
-    .as-h3,
-    .article-header h1 {
+    .as-h3 {
       font-size: 2.6rem; } }
   h3.header--solid,
-  .as-h3.header--solid,
-  .article-header h1.header--solid {
+  .as-h3.header--solid {
     background-color: #fefefe;
     color: #000;
     display: inline; }
   h3.header--framed, .ToggleBox--toggler,
-  .as-h3.header--framed,
-  .article-header h1.header--framed {
+  .as-h3.header--framed {
     border: 1px solid #5f5f5f;
     color: #5f5f5f;
     display: block;
@@ -282,8 +278,8 @@ header {
     padding: 30px; }
     @media (max-width: 579px) {
       header + .subheader {
-        font-size: 1.3rem;
-        line-height: 2rem; } }
+        font-size: 1.5rem;
+        line-height: 2.2rem; } }
     @media (min-width: 580px) {
       header + .subheader {
         padding: 50px;
@@ -915,8 +911,8 @@ a:hover {
   line-height: 2.7rem; }
   @media (max-width: 579px) {
     [data-page='homepage'] section > .flex--item > p {
-      font-size: 1.3rem;
-      line-height: 2rem; } }
+      font-size: 1.5rem;
+      line-height: 2.2rem; } }
 
 @media (max-width: 579px) {
   [data-page='homepage'] .homepage__about-item {
@@ -985,8 +981,8 @@ a:hover {
   line-height: 2.7rem; }
   @media (max-width: 579px) {
     [data-page='about'] .Content section > p {
-      font-size: 1.3rem;
-      line-height: 2rem; } }
+      font-size: 1.5rem;
+      line-height: 2.2rem; } }
 
 [data-page='products'] header .header--wrapper {
   background: url("./imgs/covers/cover_products.png") no-repeat right center;
@@ -1005,8 +1001,8 @@ a:hover {
     text-transform: uppercase; }
     @media (max-width: 579px) {
       .filter-box__category {
-        font-size: 1.3rem;
-        line-height: 2rem; } }
+        font-size: 1.5rem;
+        line-height: 2.2rem; } }
     @media (min-width: 580px) {
       .filter-box__category {
         margin-right: 50px; } }
@@ -1053,8 +1049,8 @@ a:hover {
   line-height: 2.7rem; }
   @media (max-width: 579px) {
     [data-page='contact'] .contact__box .flex--item:nth-child(3) {
-      font-size: 1.3rem;
-      line-height: 2rem; } }
+      font-size: 1.5rem;
+      line-height: 2.2rem; } }
 
 [data-page='contact'] .contact__form > .flexBox {
   flex-flow: column; }
@@ -1090,10 +1086,6 @@ a:hover {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column-reverse; }
-  [data-page='blog'] .articles article .article--posted {
-    color: #5f5f5f;
-    display: block;
-    line-height: 3rem; }
   [data-page='blog'] .articles article .article__meta {
     padding: 30px; }
   [data-page='blog'] .articles article .article--perex {
@@ -1110,10 +1102,61 @@ a:hover {
           margin-right: 50px;
           flex: 1; } }
 
-.article-header h1 {
-  border: none; }
+[data-page='blog-post'] .content {
+  margin-top: 0; }
 
-@media (min-width: 580px) {
-  .article-header {
-    display: grid;
-    grid-template-columns: 33% 1fr; } }
+[data-page='blog-post'] header {
+  padding: 0;
+  border-bottom: none; }
+  [data-page='blog-post'] header img {
+    width: 100%; }
+
+[data-page='blog-post'] .article-header {
+  padding: 30px 1rem; }
+  [data-page='blog-post'] .article-header h1 {
+    border: none;
+    color: #fefefe;
+    font-size: 3rem;
+    font-family: Helvetica;
+    font-weight: 600;
+    display: inline;
+    line-height: 3rem; }
+  @media (min-width: 580px) {
+    [data-page='blog-post'] .article-header {
+      border: 1px solid #5f5f5f;
+      border-top: none;
+      display: grid;
+      grid-template-columns: 33% 1fr;
+      align-items: center;
+      padding: 50px; } }
+  [data-page='blog-post'] .article-header p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.7rem; }
+    @media (max-width: 579px) {
+      [data-page='blog-post'] .article-header p {
+        font-size: 1.5rem;
+        line-height: 2.2rem; } }
+
+[data-page='blog-post'] .article--body h3 {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  margin: 50px 0; }
+  @media (max-width: 579px) {
+    [data-page='blog-post'] .article--body h3 {
+      font-size: 1.5rem;
+      line-height: 2.2rem; } }
+
+[data-page='blog-post'] .article--body p {
+  font-weight: 400;
+  margin: 20px 0 0; }
+  @media (min-width: 580px) {
+    [data-page='blog-post'] .article--body p {
+      margin: 50px 0 0; } }
+
+.article--posted {
+  color: #5f5f5f;
+  display: block;
+  line-height: 3rem; }
