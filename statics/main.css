@@ -8,7 +8,7 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;600;700&display=swap");
 *:where(:not(html):not(iframe):not(canvas):not(img):not(svg):not(video):not(audio):not(svg *):not(symbol *)) {
   all: unset;
   display: revert; }
@@ -104,7 +104,7 @@ h1,
   h1 > span,
   .as-h1 > span {
     flex: 1;
-    padding: 20px 20px 0.5rem 20px; }
+    padding: 20px 0 5px; }
     h1 > span:not(:last-of-type),
     .as-h1 > span:not(:last-of-type) {
       border-bottom: 2px solid #3ddee2; }
@@ -253,6 +253,9 @@ header {
   padding: 50px 50px 150px; }
   header h1 {
     margin-bottom: 0; }
+    header h1 span {
+      padding-left: 20px;
+      padding-right: 20px; }
     @media (min-width: 900px) {
       header h1 {
         min-height: 150px;
@@ -291,7 +294,7 @@ header {
     @media (max-width: 899px) {
       header[data-variant='general'] h1 {
         padding: 50px 0; }
-        header[data-variant='general'] h1 span {
+        header[data-variant='general'] h1 > span {
           border: none; } }
   @media (max-width: 899px) {
     header {
@@ -581,6 +584,16 @@ section + section,
       flex: 4; }
     .flexBox > .flex--item[flexBox-flex='5'] {
       flex: 5; }
+  .flexBox[flex-align='center'] {
+    align-items: center; }
+  .flexBox[flex-align='flex-start'] {
+    align-items: flex-start; }
+  .flexBox[flex-justify='space-between'] {
+    justify-content: space-between; }
+    .flexBox[flex-justify='space-between'] > .flex--item:first-child {
+      text-align: left; }
+    .flexBox[flex-justify='space-between'] > .flex--item:last-child {
+      text-align: right; }
 
 .gridBox {
   display: grid; }
@@ -629,13 +642,15 @@ section + section,
 
 .ContentBox {
   background-image: url("./imgs/content-box.png");
-  flex: 1 1 50%;
   padding: 15px;
   position: relative; }
   .ContentBox--box-title {
-    color: #000; }
+    color: #000;
+    padding: 0 0 5px;
+    display: block;
+    font-size: 3rem;
+    margin: 0; }
   .ContentBox--wrapper {
-    height: 100%;
     border: 2px solid #017675;
     position: relative; }
   .ContentBox--content {
@@ -643,9 +658,9 @@ section + section,
     justify-content: space-between;
     margin-bottom: 20px; }
   .ContentBox:not(:last-child) {
-    margin-right: 20px; }
+    margin-right: 10px; }
   .ContentBox:not(:first-child) {
-    margin-left: 20px; }
+    margin-left: 10px; }
   .ContentBox .ContentBox--desc {
     font-size: 1rem;
     line-height: 1.6rem;
@@ -653,13 +668,18 @@ section + section,
     margin-right: 20px; }
   @media (min-width: 900px) {
     .ContentBox--wrapper {
-      padding: 30px 30px 70px; }
+      padding: 30px; }
     .ContentBox--link {
       position: absolute;
       bottom: 20px;
       left: 30px; } }
   .ContentBox[box-variant='product-image'] .ContentBox--wrapper {
     padding: 30px; }
+  .ContentBox[box-variant='product'] .ContentBox--wrapper {
+    padding: 30px 30px 70px;
+    height: 100%; }
+  .ContentBox:not([box-variant='product']) p {
+    margin-bottom: 0; }
   @media (max-width: 899px) {
     .ContentBox {
       margin-bottom: 0.75rem; }
@@ -681,12 +701,14 @@ section + section,
         display: block;
         text-align: center;
         width: 100%; } }
+  .ContentBox p {
+    color: #000; }
 
 .ProductBox {
   background: #000;
-  flex: 1 1 50%;
-  padding: 30px;
-  border: none; }
+  border: none;
+  color: #fefefe;
+  padding: 30px; }
   .ProductBox--title {
     align-items: center;
     display: flex;
@@ -697,10 +719,12 @@ section + section,
       color: #fefefe;
       font-family: 'Bebas Neue';
       font-size: 3.5rem;
-      padding: 20px 20px 0.5rem 20px;
+      padding: 20px 0 5px;
       white-space: break-spaces;
       width: 40%; }
   .ProductBox--desc {
+    color: #fefefe; }
+  .ProductBox p {
     color: #fefefe; }
 
 .Article--preview {
@@ -750,14 +774,19 @@ section + section,
   cursor: pointer;
   outline: none; }
   .ToggleBox--toggler::after {
-    font-weight: normal;
+    color: #3ddee2;
+    content: '＋';
+    font-weight: 300;
+    font-family: Jura;
     font-size: 3rem;
-    content: '＋'; }
+    margin-top: -5px; }
+  .ToggleBox--toggler[data-active]::after {
+    content: '-'; }
 
 .ToggleBox--content {
   display: none; }
 
-.ToggleBox--toggler:active + .ToggleBox--content {
+.ToggleBox--toggler.active + .ToggleBox--content {
   display: block; }
 
 .w-12 {
@@ -1019,6 +1048,12 @@ a:hover {
     margin: 0 auto;
     width: 50%; } }
 
+[data-page='products'] .products--block > .flexBox:not(last-child) {
+  margin-bottom: 50px; }
+
+[data-page='products'] .products--block > .flexBox:nth-child(odd) .flex--item:first-child {
+  order: 2; }
+
 .filter-box {
   flex-flow: column; }
   @media (min-width: 900px) {
@@ -1123,24 +1158,34 @@ a:hover {
     column-gap: 20px; } }
 
 [data-page='blog'] .articles article {
-  margin-bottom: 20px;
   display: flex;
-  flex-direction: column-reverse; }
+  flex-direction: column-reverse;
+  margin-bottom: 20px; }
   [data-page='blog'] .articles article .article__meta {
     padding: 30px; }
+  [data-page='blog'] .articles article .article--title a:hover {
+    background-color: #3ddee2;
+    color: #000; }
   [data-page='blog'] .articles article .article--perex {
-    margin-top: 50px; }
+    margin: 50px 0 0; }
   @media (min-width: 900px) {
     [data-page='blog'] .articles article {
       border: 1px solid #5f5f5f; }
       [data-page='blog'] .articles article:first-of-type {
         flex-flow: row;
         grid-column: 1 / -1;
-        padding: 50px; }
+        padding: 50px 0 50px; }
         [data-page='blog'] .articles article:first-of-type .article--image,
         [data-page='blog'] .articles article:first-of-type .article__meta {
-          margin-right: 50px;
-          flex: 1; } }
+          flex: 1; }
+        [data-page='blog'] .articles article:first-of-type .article--perex {
+          font-size: 1.8rem;
+          font-weight: 500;
+          line-height: 2.7rem; } }
+      @media (min-width: 900px) and (max-width: 899px) {
+        [data-page='blog'] .articles article:first-of-type .article--perex {
+          font-size: 1.5rem;
+          line-height: 2.2rem; } }
 
 [data-page='blog-post'] .content {
   margin-top: 0; }
