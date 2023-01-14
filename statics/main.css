@@ -889,6 +889,12 @@ input {
     .form--item textarea {
       height: 250px; } }
 
+.form--item select {
+  background-image: url("./imgs/select-arrow.png");
+  background-position: calc(100% - 20px) center;
+  background-size: 20px 13px;
+  background-repeat: no-repeat; }
+
 @media (max-width: 899px) {
   .form--item button,
   .form--item .Button {
