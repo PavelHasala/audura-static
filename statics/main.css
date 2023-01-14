@@ -577,8 +577,7 @@ section + section,
         input.Menu--mobile:checked + .Menu .Menu--content .Menu--language {
           bottom: 0;
           right: 0;
-          top: auto;
-          position: static; }
+          top: auto; }
           input.Menu--mobile:checked + .Menu .Menu--content .Menu--language a {
             border-top: 1px solid #5f5f5f;
             display: flex; }
