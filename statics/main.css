@@ -235,28 +235,38 @@ body {
   color: #fefefe;
   font-family: Helvetica;
   font-size: 15px;
-  font-weight: bold;
-  position: relative; }
+  font-weight: bold; }
+  @media (min-width: 900px) {
+    body {
+      padding: 50px; } }
 
 .page {
   padding-top: 73px; }
   @media (min-width: 900px) {
     .page {
+      border: 1px solid #5f5f5f;
       margin: 0 auto;
-      max-width: 1215px;
+      max-width: 1315px;
       min-width: 900px;
-      min-height: 100vh;
-      padding-bottom: 30px; }
-      .page::after {
-        background-color: rgba(61, 222, 226, 0.1);
-        border: 5px solid #000;
+      min-height: 100%;
+      padding: 73px 50px 50px;
+      position: relative; }
+      .page::after, .page::before {
         content: ' ';
+        background-color: #000;
+        display: block;
         position: fixed;
-        top: 0;
+        height: 51px;
+        margin-left: -51px;
+        max-width: inherit;
+        width: 100%;
+        z-index: 101; }
+      .page::before {
+        border-bottom: 1px solid #5f5f5f;
+        top: 0; }
+      .page::after {
         bottom: 0;
-        max-width: 1215px;
-        margin: 0 auto;
-        transform: translate(-50%, 0); } }
+        border-top: 1px solid #5f5f5f; } }
 
 header {
   border: 1px solid #5f5f5f;
@@ -419,7 +429,8 @@ section + section,
   @media (min-width: 900px) {
     .Menu {
       border-left: 1px solid #5f5f5f;
-      max-width: 1215px; } }
+      max-width: calc(1315px - 101px);
+      top: 50px; } }
   .Menu--logo {
     background: url("./imgs/audura-logo.png") no-repeat 50px center;
     background-size: 131px 20px;
@@ -436,6 +447,7 @@ section + section,
     height: 100%; }
     .Menu--links > a {
       align-items: center;
+      border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
       display: flex;
       flex: 0 1 0%;
