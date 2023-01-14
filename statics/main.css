@@ -1046,14 +1046,21 @@ a:hover {
 [data-page='about'] header {
   background-image: url("./imgs/covers/cover_about.png"); }
 
-[data-page='about'] .Content section > p {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 2.7rem; }
+[data-page='about'] .Content {
+  background-image: url("./imgs/content/about/engine1.png"), url("./imgs/content/about/engine2.png"), url("./imgs/content/about/engine3.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 20% top, 80% center, 20% bottom; }
   @media (max-width: 899px) {
-    [data-page='about'] .Content section > p {
-      font-size: 1.5rem;
-      line-height: 2.2rem; } }
+    [data-page='about'] .Content {
+      background-position: cneter top, center center, center bottom; } }
+  [data-page='about'] .Content section > p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.7rem; }
+    @media (max-width: 899px) {
+      [data-page='about'] .Content section > p {
+        font-size: 1.5rem;
+        line-height: 2.2rem; } }
 
 [data-page='products'] header .header--wrapper {
   background: url("./imgs/covers/cover_products.png") no-repeat right center;
