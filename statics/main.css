@@ -1096,6 +1096,8 @@ a:hover {
 
 .filter-box {
   flex-flow: column; }
+  .filter-box.border-box {
+    padding-bottom: 10px; }
   @media (min-width: 900px) {
     .filter-box {
       flex-flow: row; } }
