@@ -270,12 +270,13 @@ body {
 
 header {
   padding: 50px 50px 50px;
-  position: relative; }
+  position: relative;
+  margin: 0; }
   @media (min-width: 901px) {
     header {
       margin-left: -50px;
       margin-right: -50px; }
-      header::before, header::after {
+      header[data-variant='general']::before, header[data-variant='general']::after {
         content: ' ';
         background: transparent url("./imgs/ruler.png") repeat-x top left;
         background-size: contain;
@@ -287,11 +288,11 @@ header {
         right: 20px;
         top: 98px;
         width: 174px; }
-      header::before {
+      header[data-variant='general']::before {
         left: -77px;
         right: auto;
         transform: rotate(270deg); }
-      header::after {
+      header[data-variant='general']::after {
         left: auto;
         right: -77px;
         transform: rotate(90deg); } }
