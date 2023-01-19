@@ -244,9 +244,9 @@ body {
     .page {
       border: 1px solid #5f5f5f;
       margin: 0 auto;
-      max-width: 1215px;
+      max-width: 1239px;
       min-height: 100%;
-      padding: 50px;
+      padding: 50px 50px 100px;
       position: relative; }
       .page::after, .page::before {
         content: ' ';
@@ -266,11 +266,32 @@ body {
         border-top: 1px solid #5f5f5f; } }
 
 header {
-  padding: 50px 50px 50px; }
+  padding: 50px 50px 50px;
+  position: relative; }
   @media (min-width: 900px) {
     header {
       margin-left: -50px;
-      margin-right: -50px; } }
+      margin-right: -50px; }
+      header::before, header::after {
+        content: ' ';
+        background: transparent url("./imgs/ruler.png") repeat-x top left;
+        background-size: contain;
+        height: 20px;
+        display: block;
+        position: absolute;
+        z-index: 99;
+        left: 20px;
+        right: 20px;
+        top: 98px;
+        width: 174px; }
+      header::before {
+        left: -77px;
+        right: auto;
+        transform: rotate(270deg); }
+      header::after {
+        left: auto;
+        right: -77px;
+        transform: rotate(90deg); } }
   header h1 {
     margin-bottom: 0; }
     header h1 span {
@@ -303,14 +324,38 @@ header {
     background-image: url("./imgs/content-box.png");
     background-repeat: repeat;
     background-position: top left;
-    padding: 20px; }
+    padding: 0; }
     header[data-variant='general'] .header--wrapper {
-      border: 2px solid #000;
-      padding: 30px 30px 50px; }
+      border: 1px solid #000;
+      padding: 30px;
+      position: relative; }
+      @media (min-width: 801px) {
+        header[data-variant='general'] .header--wrapper::before {
+          content: ' ';
+          background: transparent url("./imgs/ruler.png") repeat-x top left;
+          background-size: contain;
+          height: 20px;
+          display: block;
+          position: absolute;
+          z-index: 99;
+          left: 20px;
+          right: 20px;
+          top: 0; }
+        header[data-variant='general'] .header--wrapper::after {
+          content: ' ';
+          background: transparent url("./imgs/ruler.png") repeat-x top left;
+          background-size: contain;
+          height: 20px;
+          display: block;
+          position: absolute;
+          z-index: 99;
+          left: 20px;
+          right: 20px;
+          bottom: 0;
+          transform: rotate(180deg); } }
       @media (max-width: 800px) {
         header[data-variant='general'] .header--wrapper {
-          padding: 0;
-          border: none; } }
+          padding: 20px; } }
     @media (max-width: 800px) {
       header[data-variant='general'] h1 {
         padding: 50px 0; }
@@ -1100,8 +1145,11 @@ a:hover {
         line-height: 2.2rem; } }
 
 [data-page='products'] header .header--wrapper {
-  background: url("./imgs/covers/cover_products.png") no-repeat right center;
+  background: url("./imgs/covers/cover_products.png") no-repeat calc(100% - 50px) center;
   background-size: contain; }
+  @media (max-width: 800px) {
+    [data-page='products'] header .header--wrapper {
+      background-position: center; } }
 
 @media (min-width: 801px) {
   [data-page='products'] header + .subheader > *:first-child {
